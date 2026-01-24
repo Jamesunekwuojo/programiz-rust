@@ -68,11 +68,14 @@ This pattern has a profound impact on the way Rust code is written. It may seem 
 // Just as variables are immutable by default, so are references. We’re not allowed to modify something we have a reference to.
 
 
-let s = String::from("Hello");
+let mut s = String::from("Hello");
 
 let result = calculate_length(&s);
 
-println!("Length of variable is { }", result)
+change( &mut s);
+
+println!("Modified string {}", s);
+println!("Length of variable is { }", result);
 
 
 
@@ -82,4 +85,9 @@ println!("Length of variable is { }", result)
 // refernces e.h
 fn calculate_length(s:&String) -> usize {
   s.len()
+}
+
+// mutable reference
+fn change(some_str: &mut String)  {
+  some_str.push_str(", amen");
 }
