@@ -72,7 +72,7 @@ let s = String::from("Hello");
 
 let result = calculate_length(&s);
 
-println!("Length of variable is {}", result)
+println!("Length of variable is { }", result)
 
 
 
@@ -80,6 +80,6 @@ println!("Length of variable is {}", result)
 }
 
 // refernces e.h
-fin calculate_length(s:&String) {
-  s.len();
+fn calculate_length(s:&String) -> usize {
+  s.len()
 }
