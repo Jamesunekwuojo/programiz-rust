@@ -78,6 +78,12 @@ println!("Modified string {}", s);
 println!("Length of variable is { }", result);
 
 
+// Slice  Type
+// contigous --> means sequence of elements tha appear consecutively together in an array 
+// in data structures ..  e.g  array
+
+// Slices let you reference a contiguous sequence of elements in a collection. A slice is a kind of reference, so it does not have ownership.
+
 
 
 }
